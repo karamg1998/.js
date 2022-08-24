@@ -30,9 +30,18 @@
 //header.style.borderBottom='solid 3px #000'
 
 //get element by class name//
-var items=document.getElementsByClassName('title');
-console.log(items[0]);
-items[0].style.fontweight='bold';
-items[0].style.backgroundcolor='green';
+//var items=document.getElementsByClassName('title');
+//console.log(items[0]);
+//items[0].style.fontweight='bold';
+//items[0].style.backgroundcolor='green';
+
+var item=document.getElementsByClassName('list-group-item');
+//console.log(item[2]);
+item[2].style.backgroundcolor='green';
+
+for(var i=0;i<item.length;i++)
+{
+    item[i].style.fontweight='bold';
+}
 
 
