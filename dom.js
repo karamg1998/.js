@@ -37,11 +37,22 @@
 
 var item=document.getElementsByClassName('list-group-item');
 //console.log(item[2]);
-item[2].style.backgroundcolor='green';
+//item[2].style.backgroundcolor='green';
 
+//so, by class name it border line only those who consist class name not li.
 for(var i=0;i<item.length;i++)
 {
-    item[i].style.fontweight='bold';
+    item[i].style.borderBottom='solid 3px #000';
 }
+
+//but with li it border libe all who consist li.
+var li=document.getElementsByTagName('li');
+//console.log(li);
+for(var i=0;i<li.length;i++)
+{
+    li[i].style.borderBottom='solid 3px #000';
+}
+
+
 
 
