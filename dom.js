@@ -46,9 +46,9 @@ var item=document.getElementsByClassName('list-group-item');
 //}
 
 //but with li it border libe all who consist li.
-var li=document.getElementsByTagName('li');
+//var li=document.getElementsByTagName('li');
 //console.log(li);
-li[1].style.backgroundColor='green';
+//li[1].style.backgroundColor='green';
 
 //queryselector
 //var header=document.querySelector('#main-header');
@@ -65,9 +65,28 @@ li[1].style.backgroundColor='green';
 //var item=document.querySelector('.list-group-item');
 //item.style.color='blue';
 
-var thirditem=document.querySelector('.list-group-item:nth-child(3)');
-thirditem.style.color='white';
+//var thirditem=document.querySelector('.list-group-item:nth-child(3)');
+//thirditem.style.color='white';
 
 //queryselectorall
+//var titles=document.querySelectorAll('.title');
+//console.log(titles);
 
+//titles[0].textContent='hello';
 
+var odd=document.querySelectorAll('li:nth-child(odd)');
+//var even=document.querySelectorAll('li:nth-child(even)');
+
+for(var i=0;i<odd.length;i++)
+{
+    odd[i].style.backgroundColor='green';
+}
+
+//for(var i=0;i<even.length;i++)
+//{
+//    even[i].style.backgroundColor='green';
+//}
+
+var e=document.querySelectorAll('li');
+//console.log(e);
+e[1].style.color='green';
