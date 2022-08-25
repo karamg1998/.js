@@ -40,19 +40,34 @@ var item=document.getElementsByClassName('list-group-item');
 //item[2].style.backgroundcolor='green';
 
 //so, by class name it border line only those who consist class name not li.
-for(var i=0;i<item.length;i++)
-{
-    item[i].style.borderBottom='solid 3px #000';
-}
+//for(var i=0;i<item.length;i++)
+//{
+//    item[i].style.borderBottom='solid 3px #000';
+//}
 
 //but with li it border libe all who consist li.
 var li=document.getElementsByTagName('li');
 //console.log(li);
-for(var i=0;i<li.length;i++)
-{
-    li[i].style.borderBottom='solid 3px #000';
-}
+li[1].style.backgroundColor='green';
+
+//queryselector
+//var header=document.querySelector('#main-header');
+//header.style.borderBottom='solid 4px gray';
+
+//var input=document.querySelector('input');
+//input.value='hello';
 
 
+//var submit=document.querySelector('input[type="submit"]');
+//submit.value='send';
+
+
+//var item=document.querySelector('.list-group-item');
+//item.style.color='blue';
+
+var thirditem=document.querySelector('.list-group-item:nth-child(3)');
+thirditem.style.color='white';
+
+//queryselectorall
 
 
