@@ -35,7 +35,7 @@
 //items[0].style.fontweight='bold';
 //items[0].style.backgroundcolor='green';
 
-var item=document.getElementsByClassName('list-group-item');
+//var item=document.getElementsByClassName('list-group-item');
 //console.log(item[2]);
 //item[2].style.backgroundcolor='green';
 
@@ -74,19 +74,96 @@ var item=document.getElementsByClassName('list-group-item');
 
 //titles[0].textContent='hello';
 
-var odd=document.querySelectorAll('li:nth-child(odd)');
+//var odd=document.querySelectorAll('li:nth-child(odd)');
 //var even=document.querySelectorAll('li:nth-child(even)');
 
-for(var i=0;i<odd.length;i++)
-{
-    odd[i].style.backgroundColor='green';
-}
+//for(var i=0;i<odd.length;i++)
+//{
+ //   odd[i].style.backgroundColor='green';
+//}
 
 //for(var i=0;i<even.length;i++)
 //{
 //    even[i].style.backgroundColor='green';
 //}
 
-var e=document.querySelectorAll('li');
+//var e=document.querySelectorAll('li');
 //console.log(e);
-e[1].style.color='green';
+//e[1].style.color='green';
+
+//traversing the dom
+//var items=document.querySelector('#items');
+//parent
+//console.log(items.parentNode);
+//items.parentNode.style.background='gray';
+//console.log(items.parentNode.parentNode.parentNode);
+
+//parentelement
+//console.log(items.parentElement);
+//items.parentElement.style.background='gray';
+//console.log(items.parentElement.parentElement.parentElement);
+
+//chileNodes
+//console.log(items.childNodes);
+
+//childern
+//console.log(items.children[3]);
+
+
+//firstchild
+//console.log(items.firstChild);
+
+//firstelementchild
+//console.log(items.firstElementChild);
+
+//lastchild
+//console.log(items.lastChild);
+
+//lastelementchild
+//console.log(items.lastElementChild);
+
+//nextSibling
+//console.log(items.nextSibling);
+
+//nextElementsibling
+//console.log(items.nextElementSibling);
+
+
+//previoussibling
+//console.log(items.previousSibling);
+
+//previousElemntsibling
+//console.log(items.previousElementSibling);
+//items.previousElementSibling.style.color='yellow';
+
+//create element
+
+var newdiv=document.createElement('div');
+
+//add class
+newdiv.className='hello';
+
+//add id
+newdiv.id='2554';
+
+//set attribute
+newdiv.setAttribute('title', 'hello div');
+//console.log(newdiv);
+
+//create nextnode
+var newdivText=document.createTextNode('HEllo');
+
+//add text to div
+newdiv.appendChild(newdivText);
+//console.log(newdiv);
+
+//pushing to dom
+var container=document.querySelector('header .container');
+var h1=document.querySelector('header h1');
+container.insertBefore(newdiv, h1);
+
+//using querySelector
+var list=document.querySelector('.list-group-item');
+list.textContent='hello Item 1';
+
+
