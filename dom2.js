@@ -25,22 +25,22 @@ function addItem(e){
 
   // Create del button element
   var deleteBtn = document.createElement('button');
-  var e = document.createElement('button');
+  //var e = document.createElement('button');
 
   // Add classes to del button
   deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
-  e.className = 'btn btn-dark btn-sm float-right ';
+  //e.className = 'btn btn-dark btn-sm float-right ';
   
   
   
 
   // Append text node
   deleteBtn.appendChild(document.createTextNode('X'));
-  e.appendChild(document.createTextNode('edit'));
+  //e.appendChild(document.createTextNode('edit'));
 
   // Append button to li
   li.appendChild(deleteBtn);
-  li.appendChild(e);
+  //li.appendChild(e);
 
 
   // Append li to list
@@ -51,6 +51,7 @@ function addItem(e){
 
 // Remove item
 function removeItem(e){
+  //console.log(1);
   if(e.target.classList.contains('delete')){
     if(confirm('Are You Sure?')){
       var li = e.target.parentElement;
@@ -59,3 +60,25 @@ function removeItem(e){
   }
 }
 
+//filter items
+
+function filterItems(e)
+{
+var text = e.target.value.toLowerCase();
+//console.log(text);
+
+//get li
+
+var items = itemList.getElementsByTagName('li');
+
+// Convert to an array
+Array.from(items).forEach(function(item){
+  var itemName = item.firstChild.textContent;
+  console.log(itemName);
+  if(itemName.toLowerCase().indexOf(text) != -1){
+    item.style.display = 'block';
+  } else {
+    item.style.display = 'none';
+  }
+});
+}
